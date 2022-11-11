@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: br.com.aula.steps.LoginSteps
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.53 s - in br.com.aula.steps.LoginSteps
+validarLoginComUsernameESenhaValidos(br.com.aula.steps.LoginSteps)  Time elapsed: 10.094 s
