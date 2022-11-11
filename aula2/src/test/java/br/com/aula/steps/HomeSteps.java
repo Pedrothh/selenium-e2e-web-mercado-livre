@@ -7,6 +7,8 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.containsString;
+
 public class HomeSteps extends BaseSteps {
 
     HomePage homePage = new HomePage();
@@ -20,6 +22,7 @@ public class HomeSteps extends BaseSteps {
         homePage.escreverNoCampoPesquisar();
         homePage.clicarNoBotaoBuscar();
 
+        Assert.assertThat(driver.getCurrentUrl(), containsString("tv"));
         Assert.assertEquals("Tv 55", searchPage.validarTextNaTela());
     }
 
