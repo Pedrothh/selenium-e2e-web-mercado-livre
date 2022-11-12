@@ -74,6 +74,16 @@ public class HomeSteps extends BaseSteps {
         Assert.assertEquals("Agora, sua senha do Mercado Livre", loginPage.validarEmailValido());
     }
 
+    @Test
+    @Epic("Detalhes Produto")
+    @DisplayName("validar redirecionamento para tela com Detalhes de um produto")
+    public void validarRedirecionamentoDetalhesProduto(){
+
+       homePage.selecionarProduto();
+
+
+    }
+
 
 
 }
