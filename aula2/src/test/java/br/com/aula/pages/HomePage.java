@@ -56,8 +56,8 @@ public class HomePage extends BasePage{
         click(itemVeiculos);
 
 
-        //driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
-
+//        driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
+//
 //        try {
 //            WebDriverWait wait = new WebDriverWait(driver, 10);
 //            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")));

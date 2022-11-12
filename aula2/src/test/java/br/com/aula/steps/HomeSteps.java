@@ -81,6 +81,7 @@ public class HomeSteps extends BaseSteps {
 
        homePage.selecionarProduto();
 
+       Assert.assertEquals(produtoPage.validarTelaDetalhesProduto(), "Descrição");
 
     }
 

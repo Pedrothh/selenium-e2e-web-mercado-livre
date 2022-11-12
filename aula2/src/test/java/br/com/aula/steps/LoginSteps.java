@@ -43,7 +43,6 @@ public class LoginSteps extends BaseSteps{
     public void validarMensagemSenhaVazia(){
         homeSteps.validarRedirecionamentoLoginSenha();
 
-        loginPage.escreverSenhaInvalido();
         loginPage.clicarEntrarLogin();
 
         Assert.assertEquals("Preencha esse dado.", loginPage.validarErroSenhaInvalida());

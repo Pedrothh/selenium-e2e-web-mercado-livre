@@ -13,25 +13,32 @@ public class ProdutoSteps extends BaseSteps{
 
     HomePage homePage = new HomePage();
 
+    HomeSteps homeSteps = new HomeSteps();
+
+
     ProdutoPage produtoPage = new ProdutoPage();
 
-    @Test
-    @Epic("Detalhes Produto")
-    @DisplayName("validar redirecionamento para Tela com detalhes do Produto")
-    public void validarRedirecionamentoTelaDetalhesProduto(){
-        homePage.selecionarProduto();
-
-        Assert.assertEquals("Descrição", produtoPage.validarTelaDetalhesProduto());
-    }
 
     @Test
     @Epic("Adicionar Produto ao Carrinho")
     @DisplayName("validar redirecionamento para Tela Login ao tentar adicionar produto ao Carrinho")
     public void validarRedirecionamentoTelaLoginClicarAddCarrinho(){
-        validarRedirecionamentoTelaDetalhesProduto();
+        homeSteps.validarRedirecionamentoDetalhesProduto();
 
         produtoPage.clicarAddCarrinho();
 
         Assert.assertThat(driver.getCurrentUrl(), containsString("login"));
+    }
+
+    @Test
+    @Epic("Adicionar Produto aos Favoritos")
+    @DisplayName("validar redirecionamento para Tela Login ao tentar adicionar produto aos Favoritos")
+    public void validarRedirecionamentoTelaLoginClicarAddFavoritos(){
+        homeSteps.validarRedirecionamentoDetalhesProduto();
+
+        produtoPage.clicarAddFavoritos();
+
+        Assert.assertEquals(produtoPage.validarErroFavoritarProduto(), "Olá! Para adicionar aos favoritos, acesse a sua conta");
+
     }
 }
