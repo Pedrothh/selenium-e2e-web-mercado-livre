@@ -12,9 +12,7 @@ public class ModalPage extends BasePage {
 
     private static final By textValidateCep2 =
             By.xpath("//*[@id=\"root-app\"]/div/div[1]/h1");
-// #root-app > div > div.andes-modal-dialog__header.layout--embed__header > h1
-    // #root-app > div
-    // //*[@id="root-app"]/div/div[1]/h1
+
 
     private static final By campoCep =
             By.xpath("/html/body/main/div/div[2]/form/div/div/div/div[1]/label/div/input");

@@ -53,34 +53,13 @@ public class HomePage extends BasePage{
     }
 
     public void clicaEmVeiculos(){
-<<<<<<< HEAD
-        click(itemVeiculos);
 
-
-//        driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
-//
-//        try {
-//            WebDriverWait wait = new WebDriverWait(driver, 10);
-//            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")));
-//            click((By) element);
-//
-//            waitElement(itemVeiculos);
-//            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
-//
-//        } catch (Exception err) {
-//            //waitElement(dropdownCategorias);
-//            waitElement(itemVeiculos);
-//            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
-//        }
-
-=======
         try{
             click(itemVeiculos);
         } catch (org.openqa.selenium.ElementNotInteractableException err){
             System.out.println("fail2! " + err.getMessage());
         }
     }
->>>>>>> 5704127cfea358d17aa6668aa75a6bd0be56fbce
 
     @Step("Clicando no botao Informe seu CEP")
     public void clicarNoBotaoCep()  {
