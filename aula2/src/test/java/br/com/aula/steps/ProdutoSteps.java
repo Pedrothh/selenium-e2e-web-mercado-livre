@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class ProdutoStep extends BaseSteps{
+public class ProdutoSteps extends BaseSteps{
 
     HomePage homePage = new HomePage();
 

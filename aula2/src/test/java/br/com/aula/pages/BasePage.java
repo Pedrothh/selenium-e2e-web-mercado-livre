@@ -2,6 +2,7 @@ package br.com.aula.pages;
 
 import br.com.aula.utils.Elements;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class BasePage extends Elements {
 

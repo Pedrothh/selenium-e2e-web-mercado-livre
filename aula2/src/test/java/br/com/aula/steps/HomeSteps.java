@@ -1,10 +1,8 @@
 package br.com.aula.steps;
 
-import br.com.aula.pages.BannerPage;
-import br.com.aula.pages.LoginPage;
-import br.com.aula.pages.SearchPage;
-import br.com.aula.pages.HomePage;
+import br.com.aula.pages.*;
 import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,6 +18,8 @@ public class HomeSteps extends BaseSteps {
     BannerPage bannerPage = new BannerPage();
 
     LoginPage loginPage = new LoginPage();
+
+    ProdutoPage produtoPage = new ProdutoPage();
 
     @Test
     @Epic("Barra de Pesquisa")
@@ -83,6 +83,22 @@ public class HomeSteps extends BaseSteps {
 
 
     }
+
+    @Test
+    @Epic("Lista de categorias")
+    @Feature("Categoria Veículos")
+    @DisplayName("Validar o redirecionamento da categoria Veículos no dropdown da lista de categorias")
+    public void validarDropdownListaCategorias(){
+        homePage.clicaEmCategorias();
+        homePage.clicaEmVeiculos();
+
+        Assert.assertEquals("https://www.mercadolivre.com.br/c/carros-motos-e-outros#menu=categories", driver.getCurrentUrl());
+        Assert.assertEquals("Carros e Caminhonetes", produtoPage.validarTextoSpanCarrosECaminhonetes());
+        Assert.assertThat(produtoPage.validarTextoDivH2CarrosECaminhonetes().toLowerCase(), containsString("carros"));
+
+    }
+
+
 
 
 

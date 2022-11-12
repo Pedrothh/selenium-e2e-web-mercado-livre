@@ -1,7 +1,12 @@
+br\com\aula\pages\ProdutoPage.class
+br\com\aula\steps\LoginSteps.class
+br\com\aula\pages\BannerPage.class
 br\com\aula\pages\BasePage.class
-br\com\aula\pages\SearchPage.class
-br\com\aula\steps\HomeSteps.class
+br\com\aula\pages\ModalPage.class
 br\com\aula\steps\BaseSteps.class
 br\com\aula\utils\Elements.class
+br\com\aula\pages\SearchPage.class
+br\com\aula\steps\HomeSteps.class
+br\com\aula\pages\LoginPage.class
 br\com\aula\pages\HomePage.class
 br\com\aula\utils\Browser.class

@@ -2,6 +2,7 @@ package br.com.aula.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -15,6 +16,9 @@ public class Browser {
         // Informando a automação qual app vai utilizar
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 
+//        ChromeOptions options = new ChromeOptions();
+//        options.setHeadless(true);
+//        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 40);
 

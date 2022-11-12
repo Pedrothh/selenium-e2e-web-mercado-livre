@@ -11,6 +11,7 @@ public class BaseSteps extends Browser {
     @Before
     public void abrirNavegador(){
         browserUp("https://www.mercadolivre.com.br/");
+        driver.manage().deleteAllCookies();
     }
 
     @After
