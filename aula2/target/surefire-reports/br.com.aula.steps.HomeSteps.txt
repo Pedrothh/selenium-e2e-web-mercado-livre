@@ -1,5 +1,6 @@
 -------------------------------------------------------------------------------
 Test set: br.com.aula.steps.HomeSteps
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.772 s - in br.com.aula.steps.HomeSteps
-validarBuscaDeProduto(br.com.aula.steps.HomeSteps)  Time elapsed: 9.576 s
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.875 s - in br.com.aula.steps.HomeSteps
+validarBuscaProdutoSemTextoInserido(br.com.aula.steps.HomeSteps)  Time elapsed: 8.398 s
+validarBuscaDeProduto(br.com.aula.steps.HomeSteps)  Time elapsed: 9.126 s
