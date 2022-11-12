@@ -20,7 +20,11 @@ public class Browser {
 //        options.setHeadless(true);
 //        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
+<<<<<<< HEAD
         wait = new WebDriverWait(driver, 10);
+=======
+        wait = new WebDriverWait(driver, 5);
+>>>>>>> 5704127cfea358d17aa6668aa75a6bd0be56fbce
 
         // Abrir navegador = .get
         driver.get(url);

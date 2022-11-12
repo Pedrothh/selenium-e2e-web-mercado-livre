@@ -21,6 +21,8 @@ public class HomeSteps extends BaseSteps {
 
     ProdutoPage produtoPage = new ProdutoPage();
 
+    ModalPage modalPage = new ModalPage();
+
     @Test
     @Epic("Barra de Pesquisa")
     @DisplayName("validar busca de produto")
@@ -97,6 +99,16 @@ public class HomeSteps extends BaseSteps {
         Assert.assertEquals("Carros e Caminhonetes", produtoPage.validarTextoSpanCarrosECaminhonetes());
         Assert.assertThat(produtoPage.validarTextoDivH2CarrosECaminhonetes().toLowerCase(), containsString("carros"));
 
+    }
+
+    @Test
+    @Epic("Informe seu CEP")
+    @Feature("Abrir modal")
+    @DisplayName("Validar o modal de informar o CEP")
+    public void validarModalIconeCep() throws InterruptedException {
+        homePage.clicarNoBotaoCep();
+
+        Assert.assertEquals(modalPage.validarTextNoModalCep(), "Selecione onde quer receber suas compras");
     }
 
 

@@ -23,6 +23,9 @@ public class HomePage extends BasePage{
     private static final By itemVeiculos =
             By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a");
 
+    private static final By btnCep =
+            By.xpath("/html/body/header/div/div[2]/ul/li[1]/a");
+
     @Step("Escrevendo no campo pesquisar")
     public void escreverNoCampoPesquisar(){
         sendKeys(campoPesquisar, "tv 55");
@@ -38,21 +41,19 @@ public class HomePage extends BasePage{
         click(btnProduto);
     }
 
-    @Step("Clicando no dropdown Categorias")
+    @Step("Clico no dropdown Categorias e escolho a opção categoria")
     public void clicaEmCategorias(){
         try {
             click(dropdownCategorias);
-            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]")).click();
-        } catch (org.openqa.selenium.ElementNotInteractableException err){
-            waitElement(dropdownCategorias);
-            click(dropdownCategorias);
-            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]")).click();
-        }
+            System.out.println("passou1!");
 
+        } catch (org.openqa.selenium.ElementNotInteractableException err){
+            System.out.println("fail1! " + err.getMessage());
+        }
     }
 
-    @Step("Clicando no item Veículos")
     public void clicaEmVeiculos(){
+<<<<<<< HEAD
         click(itemVeiculos);
 
 
@@ -72,7 +73,18 @@ public class HomePage extends BasePage{
 //            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[2]/div/ul/li[1]/a")).click();
 //        }
 
+=======
+        try{
+            click(itemVeiculos);
+        } catch (org.openqa.selenium.ElementNotInteractableException err){
+            System.out.println("fail2! " + err.getMessage());
+        }
+    }
+>>>>>>> 5704127cfea358d17aa6668aa75a6bd0be56fbce
 
+    @Step("Clicando no botao Informe seu CEP")
+    public void clicarNoBotaoCep()  {
+        click(btnCep);
     }
 
 

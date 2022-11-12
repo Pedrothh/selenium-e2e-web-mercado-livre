@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: br.com.aula.steps.HomeSteps
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 72.958 s <<< FAILURE! - in br.com.aula.steps.HomeSteps
+validarRedirecionamentoPlantaoBlackFriday(br.com.aula.steps.HomeSteps)  Time elapsed: 14.63 s
+validarDropdownListaCategorias(br.com.aula.steps.HomeSteps)  Time elapsed: 10.439 s
+validarModalIconeCep(br.com.aula.steps.HomeSteps)  Time elapsed: 7.905 s
+validarBuscaProdutoSemTextoInserido(br.com.aula.steps.HomeSteps)  Time elapsed: 5.287 s
+validarRedirecionamentoTelaLogin(br.com.aula.steps.HomeSteps)  Time elapsed: 6.721 s
+validarRedirecionamentoDetalhesProduto(br.com.aula.steps.HomeSteps)  Time elapsed: 6.057 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none; width: 240px;">...</div> is not clickable at point (471, 850). Other element would receive the click: <div role="region" class="cookie-consent-banner-opt-out">...</div>
+  (Session info: chrome=107.0.5304.107)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-C6OAH2D', ip: '192.168.127.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_352'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Pichau\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50061}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27bc9d48fa26b941494c2109f113c381
+	at br.com.aula.steps.HomeSteps.validarRedirecionamentoDetalhesProduto(HomeSteps.java:84)
+
+validarRedirecionamentoLoginSenha(br.com.aula.steps.HomeSteps)  Time elapsed: 13.075 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector:  #root-app > div > div.wrap > div > div.andes-card.andes-card--flat.andes-card--default.center-card__body.center-card__body--footerless.andes-card--padding-default > div > h1 > div (tried for 5 second(s) with 500 milliseconds interval)
+	at br.com.aula.steps.HomeSteps.validarRedirecionamentoLoginSenha(HomeSteps.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":" #root-app > div > div.wrap > div > div.andes-card.andes-card--flat.andes-card--default.center-card__body.center-card__body--footerless.andes-card--padding-default > div > h1 > div"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-C6OAH2D', ip: '192.168.127.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_352'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Pichau\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50107}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: db8b914e104cf6bb01312874964de567
+*** Element info: {Using=css selector, value= #root-app > div > div.wrap > div > div.andes-card.andes-card--flat.andes-card--default.center-card__body.center-card__body--footerless.andes-card--padding-default > div > h1 > div}
+	at br.com.aula.steps.HomeSteps.validarRedirecionamentoLoginSenha(HomeSteps.java:76)
+
+validarBuscaDeProduto(br.com.aula.steps.HomeSteps)  Time elapsed: 8.03 s
