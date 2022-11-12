@@ -21,7 +21,7 @@ public class Browser {
 //        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
 
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 5);
 
 
         // Abrir navegador = .get
