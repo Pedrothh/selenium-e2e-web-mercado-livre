@@ -39,6 +39,17 @@ public class HomePage extends BasePage{
     private static final By btnOfertas =
             By.xpath("/html/body/header/div/div[2]/ul/li[3]/a");
 
+    private static final By itemMaisVendidos =
+            By.cssSelector("body > header > div > div.nav-menu > ul > li:nth-child(2) > div > ul > li:nth-child(19) > a");
+
+    private static final By itemTecnologia =
+            By.cssSelector("body > header > div > div.nav-menu > ul > li:nth-child(2) > div > ul > li.nav-categs-departments__list.nav-categs-departments__list--dynamic > a");
+
+
+    private static final By itemEquipamentoParaDj =
+            By.cssSelector("div.nav-categs-detail__categ:nth-child(4) > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)");
+
+
 
     @Step("Escreve no campo pesquisar")
     public void escreverNoCampoPesquisar(){
@@ -56,12 +67,13 @@ public class HomePage extends BasePage{
         click(btnProduto);
     }
 
-    @Step("Clica no dropdown Categorias e escolho a opção categoria")
+    @Step("Clica no botão(dropdown) Categorias e escolhe a opção categoria")
     public void clicaEmCategorias(){
         click(btnCookies);
         click(dropdownCategorias);
     }
 
+    @Step("CLica em Veículos")
     public void clicaEmVeiculos(){
         click(itemVeiculos);
     }
@@ -95,6 +107,23 @@ public class HomePage extends BasePage{
         click(btnCookies);
         click(btnOfertas);
     }
+
+    @Step("Clica em Mais Vendidos")
+    public void clicaEmMaisVendidos(){
+        click(itemMaisVendidos);
+    }
+
+    @Step("Clica em Tecnologia")
+    public void clicaEmTecnologia(){
+        click(itemTecnologia);
+    }
+
+    @Step("Clica em Equipamentos para Djs")
+    public void clicaEmEquipamentosParaDjs(){
+        click(itemEquipamentoParaDj);
+    }
+
+
 
 
 
