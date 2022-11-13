@@ -15,5 +15,11 @@ public class Elements extends BaseSteps {
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
+    public static WebElement waitVisibility(By element){
+        return wait.until(ExpectedConditions.presenceOfElementLocated(element));
+    }
+
+
+
 
 }

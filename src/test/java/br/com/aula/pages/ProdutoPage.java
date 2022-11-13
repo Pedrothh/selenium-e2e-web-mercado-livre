@@ -3,6 +3,8 @@ package br.com.aula.pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
+import static br.com.aula.pages.HomePage.btnCookies;
+
 public class ProdutoPage extends BasePage{
     private static final By detalhesValidate =
             By.cssSelector("#ui-pdp-main-container > div.ui-pdp-container__col.col-3.ui-pdp-container--column-center.pb-40 > div > div:nth-child(6) > div > div > h2");
@@ -33,29 +35,24 @@ public class ProdutoPage extends BasePage{
     }
 
     public void clicarAddCarrinho(){
+        click(btnCookies);
         click(btnAddCarrinho);
     }
 
     public void clicarAddFavoritos(){
+        click(btnCookies);
         click(btnFavoritos);
     }
 
 
     @Step("Valido o texto \"Carros e Caminhonetes\" como primeiro filtro de busca ")
     public String validarTextoSpanCarrosECaminhonetes(){
-        try {
-        waitElement(spanCarrosECaminhonetes);
         return getText(spanCarrosECaminhonetes);
-        } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-            waitElement(spanCarrosECaminhonetes);
-            return getText(spanCarrosECaminhonetes);
-        }
     }
     @Step("Valido o texto \"Carros e Caminhonetes\" na div de texto em cima do primeiro carrousel ")
     public String validarTextoDivH2CarrosECaminhonetes(){
-        waitElement(spanCarrosECaminhonetes);
-        waitElement(divH2DynamicCarouselCarrosECaminhetes);
         return getText(divH2DynamicCarouselCarrosECaminhetes);
+
     }
 
 }

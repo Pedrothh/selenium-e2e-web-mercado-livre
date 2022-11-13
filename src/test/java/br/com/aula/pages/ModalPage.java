@@ -19,7 +19,7 @@ public class ModalPage extends BasePage {
 
 
 
-    @Step("Validando texto na tela")
+    @Step("Validando texto no modal CEP")
     public String validarTextNoModalCep() throws InterruptedException {
         Thread.sleep(3000);
         WebElement element1 = element(iframe);
@@ -31,6 +31,11 @@ public class ModalPage extends BasePage {
             return "deu ruim! " + err.getMessage();
         }
         // driver.switchTo().defaultContent();
+    }
+
+    @Step("Validando placeholder no modal CEP")
+    public String validarPlaceholderNoModalCep() {
+        return driver.findElement(By.cssSelector(".andes-form-control__field")).getAttribute("placeholder");
     }
 
     @Step

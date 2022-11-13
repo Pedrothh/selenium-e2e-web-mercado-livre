@@ -17,7 +17,8 @@ public class HomePage extends BasePage{
     private static final By btnProduto =
             By.cssSelector("#root-app > div > div:nth-child(3) > section > section > div.carousel-container > div > div > div > div:nth-child(1)");
 
-
+    static final By btnCookies =
+            By.xpath("/html/body/div[2]/div[1]/div[2]/button[1]");
     private static final By dropdownCategorias =
             By.xpath("//*[@class=\"nav-menu\"]/ul/li[2]/a");
     private static final By itemVeiculos =
@@ -38,31 +39,23 @@ public class HomePage extends BasePage{
 
     @Step("Clicando no produto")
     public void selecionarProduto(){
+        click(btnCookies);
         click(btnProduto);
     }
 
     @Step("Clico no dropdown Categorias e escolho a opção categoria")
     public void clicaEmCategorias(){
-        try {
-            click(dropdownCategorias);
-            System.out.println("passou1!");
-
-        } catch (org.openqa.selenium.ElementNotInteractableException err){
-            System.out.println("fail1! " + err.getMessage());
-        }
+        click(btnCookies);
+        click(dropdownCategorias);
     }
 
     public void clicaEmVeiculos(){
-
-        try{
-            click(itemVeiculos);
-        } catch (org.openqa.selenium.ElementNotInteractableException err){
-            System.out.println("fail2! " + err.getMessage());
-        }
+        click(itemVeiculos);
     }
 
     @Step("Clicando no botao Informe seu CEP")
     public void clicarNoBotaoCep()  {
+        click(btnCookies);
         click(btnCep);
     }
 
