@@ -27,23 +27,23 @@ public class HomePage extends BasePage{
     private static final By btnCep =
             By.xpath("/html/body/header/div/div[2]/ul/li[1]/a");
 
-    @Step("Escrevendo no campo pesquisar")
+    @Step("Escreve no campo pesquisar")
     public void escreverNoCampoPesquisar(){
         sendKeys(campoPesquisar, "tv 55");
     }
 
-    @Step("Clicando no botao Buscar")
+    @Step("Clica no botao Buscar")
     public void clicarNoBotaoBuscar(){
         click(btnBuscar);
     }
 
-    @Step("Clicando no produto")
+    @Step("Clica no produto")
     public void selecionarProduto(){
         click(btnCookies);
         click(btnProduto);
     }
 
-    @Step("Clico no dropdown Categorias e escolho a opção categoria")
+    @Step("Clica no dropdown Categorias e escolho a opção categoria")
     public void clicaEmCategorias(){
         click(btnCookies);
         click(dropdownCategorias);
@@ -53,7 +53,7 @@ public class HomePage extends BasePage{
         click(itemVeiculos);
     }
 
-    @Step("Clicando no botao Informe seu CEP")
+    @Step("Clica no botao Informe seu CEP")
     public void clicarNoBotaoCep()  {
         click(btnCookies);
         click(btnCep);

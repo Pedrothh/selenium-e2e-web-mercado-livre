@@ -17,9 +17,18 @@ public class ModalPage extends BasePage {
     private static final By campoCep =
             By.xpath("/html/body/main/div/div[2]/form/div/div/div/div[1]/label/div/input");
 
+    // .andes-form-control__field
 
+    private static final By botaoUsarCep =
+            By.cssSelector("button.andes-button > span:nth-child(1)");
 
-    @Step("Validando texto no modal CEP")
+    private static final By spanEnderecoDoCep =
+            By.xpath("/html/body/header/div/div[2]/ul/li[1]/a/span[2]");
+
+    private static final By spanInformarCepObrigatorio =
+            By.cssSelector(".andes-form-control__message");
+
+    @Step("Valida texto no modal CEP")
     public String validarTextNoModalCep() throws InterruptedException {
         Thread.sleep(3000);
         WebElement element1 = element(iframe);
@@ -33,13 +42,46 @@ public class ModalPage extends BasePage {
         // driver.switchTo().defaultContent();
     }
 
-    @Step("Validando placeholder no modal CEP")
+    @Step("Valida placeholder no modal CEP")
     public String validarPlaceholderNoModalCep() {
         return driver.findElement(By.cssSelector(".andes-form-control__field")).getAttribute("placeholder");
     }
 
-    @Step
-    public void escreverNoTextModal(){
-        sendKeys(campoCep, "Testando");
+    @Step("Escreve no campo de CEP")
+    public void escreverNoTextModal() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement element1 = element(iframe);
+        driver.switchTo().frame(element1);
+
+        sendKeys(campoCep, "58030020");
     }
+
+
+    @Step("Clica no Botão Usar")
+    public void clicaNoBotaoUsarCep()  {
+        click(botaoUsarCep);
+    }
+
+    @Step("Clica no Botão Usar")
+    public void clicaNoBotaoUsarCepComSleep() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement element1 = element(iframe);
+        driver.switchTo().frame(element1);
+        click(botaoUsarCep);
+    }
+
+    @Step("Valida o endereço buscado")
+    public String validarEnderecoDoCepBuscado() throws InterruptedException {
+        Thread.sleep(5000);
+        return getText(spanEnderecoDoCep);
+    }
+
+    @Step("Valida o endereço buscado")
+    public String validarSpanInformarCepObrigatorio() throws InterruptedException {
+        Thread.sleep(5000);
+        return getText(spanInformarCepObrigatorio);
+    }
+
 }
+
+

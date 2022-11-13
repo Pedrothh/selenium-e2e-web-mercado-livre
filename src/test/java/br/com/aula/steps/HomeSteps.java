@@ -99,7 +99,7 @@ public class HomeSteps extends BaseSteps {
     @Epic("Lista de categorias")
     @Feature("Categoria Veículos")
     @DisplayName("Validar o redirecionamento da categoria Veículos no dropdown da lista de categorias")
-    public void validarDropdownListaCategorias(){
+    public void testeDevevVlidarDropdownListaCategorias(){
         homePage.clicaEmCategorias();
         homePage.clicaEmVeiculos();
 
@@ -113,14 +113,34 @@ public class HomeSteps extends BaseSteps {
     @Epic("Informe seu CEP")
     @Feature("Abrir modal")
     @DisplayName("Validar o modal de informar o CEP")
-    public void validarModalIconeCep() throws InterruptedException {
+    public void testeDeveValidarModalCep() throws InterruptedException {
         homePage.clicarNoBotaoCep();
 
         Assert.assertEquals(modalPage.validarTextNoModalCep(), "Selecione onde quer receber suas compras");
         Assert.assertEquals(modalPage.validarPlaceholderNoModalCep(), "Informar um CEP");
+    }
 
-        // .andes-form-control__field
-        // /html/body/main/div/div[2]/form/div/div/div/div[1]/label/div/input
+    @Test
+    @Epic("Informe seu CEP")
+    @Feature("Buscar endereço pelo CEP")
+    @DisplayName("Validar buscar CEP pelo modal de informar o CEP")
+    public void testeDeveValidarBuscarCepModalCep() throws InterruptedException {
+        homePage.clicarNoBotaoCep();
+        modalPage.escreverNoTextModal();
+        modalPage.clicaNoBotaoUsarCep();
+
+        Assert.assertEquals(modalPage.validarEnderecoDoCepBuscado(), "João Pessoa 58030020");
+    }
+
+    @Test
+    @Epic("Informe seu CEP")
+    @Feature("Buscar endereço sem CEP")
+    @DisplayName("Validar erro ao deixar o numero do CEP em branco e tentar clicar no botão usar")
+    public void testeDeveMostrarErroAoTentarValidarBuscarCepModalCepSemPassarUmCepValido() throws InterruptedException {
+        homePage.clicarNoBotaoCep();
+        modalPage.clicaNoBotaoUsarCepComSleep();
+
+        Assert.assertEquals(modalPage.validarSpanInformarCepObrigatorio(), "Preencha esse dado.");
     }
 
 
