@@ -21,14 +21,14 @@ public class Browser {
 //        driver = new ChromeDriver(options);
         driver = new ChromeDriver();
 
-        wait = new WebDriverWait(driver, 5);
+        wait = new WebDriverWait(driver, 40);
 
 
         // Abrir navegador = .get
         driver.get(url);
         // Maximar
         driver.manage().window().maximize();
-        // daley
+        // delay
         driver.manage().timeouts().implicitlyWait(6000, TimeUnit.MILLISECONDS);
     }
 
