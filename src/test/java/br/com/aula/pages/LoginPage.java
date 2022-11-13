@@ -31,6 +31,8 @@ public class LoginPage extends BasePage{
     private static final By paginaLoginEmailValidate =
             By.cssSelector(" #root-app > div > div.wrap > div > div.andes-card.andes-card--flat.andes-card--default.center-card__body.center-card__body--footerless.andes-card--padding-default > div > h1 > div");
 
+    private static final By paginaLoginVendaValidate =
+            By.xpath("/html/body/main/div/div[1]/div/div[2]/div/h1");
 
 
     public void acessarTelaLogin(){
@@ -67,6 +69,10 @@ public class LoginPage extends BasePage{
 
     public String validarErroSenhaInvalida(){
         return getText(senhaErrorValidate);
+    }
+
+    public String validarMensagemDeLoginAoTentarVenderDeslogado(){
+        return getText(paginaLoginVendaValidate);
     }
 
 }

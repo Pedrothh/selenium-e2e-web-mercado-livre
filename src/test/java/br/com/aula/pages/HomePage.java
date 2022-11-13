@@ -27,6 +27,19 @@ public class HomePage extends BasePage{
     private static final By btnCep =
             By.xpath("/html/body/header/div/div[2]/ul/li[1]/a");
 
+    private static final By btnContato =
+            By.xpath("/html/body/header/div/div[2]/ul/li[7]/a");
+
+    private static final By btnVender =
+            By.xpath("/html/body/header/div/div[2]/ul/li[6]/a");
+
+    private static final By btnModa =
+            By.xpath("/html/body/header/div/div[2]/ul/li[5]/a");
+
+    private static final By btnOfertas =
+            By.xpath("/html/body/header/div/div[2]/ul/li[3]/a");
+
+
     @Step("Escreve no campo pesquisar")
     public void escreverNoCampoPesquisar(){
         sendKeys(campoPesquisar, "tv 55");
@@ -57,6 +70,30 @@ public class HomePage extends BasePage{
     public void clicarNoBotaoCep()  {
         click(btnCookies);
         click(btnCep);
+    }
+
+    @Step("Clica no botão Contato")
+    public void clicarNoBotaoContato() {
+        click(btnCookies);
+        click(btnContato);
+    }
+
+    @Step("Clica no botão Vender")
+    public void clicarNoBotaoVender() {
+        click(btnCookies);
+        click(btnVender);
+    }
+
+    @Step("Clica no botão Moda")
+    public void clicarNoBotaoModa() {
+        click(btnCookies);
+        click(btnModa);
+    }
+
+    @Step("Clica no botão Ofertas do dia")
+    public void clicarNoBotaoOfertas() {
+        click(btnCookies);
+        click(btnOfertas);
     }
 
 

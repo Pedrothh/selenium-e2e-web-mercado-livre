@@ -96,10 +96,10 @@ public class HomeSteps extends BaseSteps {
     }
 
     @Test
-    @Epic("Lista de categorias")
-    @Feature("Categoria Veículos")
-    @DisplayName("Validar o redirecionamento da categoria Veículos no dropdown da lista de categorias")
-    public void testeDevevVlidarDropdownListaCategorias(){
+    @Epic("Botão Categorias")
+    @Feature("Categoria por Veículos")
+    @DisplayName("Validar o redirecionamento para categoria por Veículos no botão Categorias")
+    public void testeDeveValidarDropdownListaCategorias(){
         homePage.clicaEmCategorias();
         homePage.clicaEmVeiculos();
 
@@ -110,7 +110,7 @@ public class HomeSteps extends BaseSteps {
     }
 
     @Test
-    @Epic("Informe seu CEP")
+    @Epic("Botão Informe seu CEP")
     @Feature("Abrir modal")
     @DisplayName("Validar o modal de informar o CEP")
     public void testeDeveValidarModalCep() throws InterruptedException {
@@ -121,7 +121,7 @@ public class HomeSteps extends BaseSteps {
     }
 
     @Test
-    @Epic("Informe seu CEP")
+    @Epic("Botão Informe seu CEP")
     @Feature("Buscar endereço pelo CEP")
     @DisplayName("Validar buscar CEP pelo modal de informar o CEP")
     public void testeDeveValidarBuscarCepModalCep() throws InterruptedException {
@@ -133,7 +133,7 @@ public class HomeSteps extends BaseSteps {
     }
 
     @Test
-    @Epic("Informe seu CEP")
+    @Epic("Botão Informe seu CEP")
     @Feature("Buscar endereço sem CEP")
     @DisplayName("Validar erro ao deixar o numero do CEP em branco e tentar clicar no botão usar")
     public void testeDeveMostrarErroAoTentarValidarBuscarCepModalCepSemPassarUmCepValido() throws InterruptedException {
@@ -141,6 +141,44 @@ public class HomeSteps extends BaseSteps {
         modalPage.clicaNoBotaoUsarCepComSleep();
 
         Assert.assertEquals(modalPage.validarSpanInformarCepObrigatorio(), "Preencha esse dado.");
+    }
+
+    @Test
+    @Epic("Botão Contato")
+    @DisplayName("Validar o redirecionamento ao clicar no botão Contato")
+    public void testeDeveRedirecionarParaPaginaContato() {
+        homePage.clicarNoBotaoContato();
+
+        Assert.assertThat(driver.getCurrentUrl(), containsString("ajuda"));
+
+    }
+
+    @Test
+    @Epic("Botão Vender")
+    @DisplayName("Validar o redirecionamento ao clicar no botão Vender")
+    public void testeDeveRedirecionarParaLoginAoClicarEmVenderSemEstarLogado() {
+        homePage.clicarNoBotaoVender();
+
+        Assert.assertThat(loginPage.validarMensagemDeLoginAoTentarVenderDeslogado().toLowerCase(), containsString("para vender"));
+        Assert.assertThat(driver.getCurrentUrl(), containsString("login"));
+    }
+
+    @Test
+    @Epic("Botão Moda")
+    @DisplayName("Validar o redirecionamento ao clicar no botão Moda")
+    public void testeDeveRedirecionarParaPaginaModa() {
+        homePage.clicarNoBotaoModa();
+
+        Assert.assertThat(driver.getCurrentUrl(), containsString("roupas"));
+    }
+
+    @Test
+    @Epic("Botão Ofertas do dia")
+    @DisplayName("Validar o redirecionamento ao clicar no botão Ofertas do dia")
+    public void testeDeveRedirecionarParaPaginaOfertas() {
+        homePage.clicarNoBotaoOfertas();
+
+        Assert.assertThat(driver.getCurrentUrl(), containsString("ofertas"));
     }
 
 
