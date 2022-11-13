@@ -81,7 +81,7 @@ public class HomeSteps extends BaseSteps {
         loginPage.escreverLoginValido();
         loginPage.clicarContinuarLogin();
 
-        //Assert.assertEquals("Agora, sua senha do Mercado Livre", loginPage.validarEmailValido());
+        Assert.assertEquals("Agora, sua senha do Mercado Livre", loginPage.validarEmailValido());
     }
 
     @Test
@@ -179,6 +179,27 @@ public class HomeSteps extends BaseSteps {
         homePage.clicarNoBotaoOfertas();
 
         Assert.assertThat(driver.getCurrentUrl(), containsString("ofertas"));
+    }
+
+    @Test
+    @Epic("Botão Categorias")
+    @DisplayName("Validar o redirecionamento para página de produtos mais vendidos")
+    public void testeDeveRedirecionarParaMaisVendidos(){
+        homePage.clicaEmCategorias();
+        homePage.clicaEmMaisVendidos();
+
+        Assert.assertThat(driver.getCurrentUrl(), containsString("mais-vendidos"));
+    }
+
+    @Test
+    @Epic("Botão Categorias")
+    @DisplayName("Validar o redirecionamento para página de Equipamento para Djs")
+    public void testeDeveRedirecionarParaEquipamentoParaDjs(){
+        homePage.clicaEmCategorias();
+        homePage.clicaEmTecnologia();
+        homePage.clicaEmEquipamentosParaDjs();
+
+        Assert.assertThat(driver.getCurrentUrl(), containsString("equipamento-djs"));
     }
 
 
