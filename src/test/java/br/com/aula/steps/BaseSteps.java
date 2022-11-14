@@ -4,7 +4,6 @@ package br.com.aula.steps;
 import br.com.aula.utils.Browser;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.By;
 
 public class BaseSteps extends Browser {
 

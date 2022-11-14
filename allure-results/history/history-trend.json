@@ -1,0 +1,121 @@
+[ {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 19,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 19,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 2,
+    "skipped" : 0,
+    "passed" : 18,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 20,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 2,
+    "skipped" : 0,
+    "passed" : 18,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 3,
+    "skipped" : 0,
+    "passed" : 17,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 2,
+    "skipped" : 0,
+    "passed" : 18,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 19,
+    "unknown" : 0,
+    "total" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 2,
+    "skipped" : 0,
+    "passed" : 20,
+    "unknown" : 0,
+    "total" : 22
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+} ]
