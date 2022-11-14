@@ -1,0 +1,10 @@
+{
+  "name": "Gaby e Pedro",
+  "type": "Jenkins",
+  "url": "https://www.mercadolivre.com.br/",
+  "buildOrder": 1,
+  "buildName": "https://www.mercadolivre.com.br/",
+  "buildUrl": "https://www.mercadolivre.com.br/",
+  "reportUrl": "https://www.mercadolivre.com.br/",
+  "reportName": "Mercado Livre Test report"
+}
