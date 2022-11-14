@@ -1,0 +1,77 @@
+[ {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 19,
+    "Test defects" : 1
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 19,
+    "Test defects" : 1
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 18,
+    "Test defects" : 2
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 20
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 18,
+    "Test defects" : 2
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 17,
+    "Test defects" : 3
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 18,
+    "Test defects" : 2
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 19,
+    "Test defects" : 1
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : {
+    "Teste executado com sucesso" : 20,
+    "Test defects" : 2
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "https://www.mercadolivre.com.br/",
+  "reportName" : "Mercado Livre Test report",
+  "data" : { }
+} ]

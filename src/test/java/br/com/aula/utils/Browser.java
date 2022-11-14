@@ -28,7 +28,7 @@ public class Browser {
         driver.get(url);
         // Maximar
         driver.manage().window().maximize();
-        // daley
+        // delay
         driver.manage().timeouts().implicitlyWait(6000, TimeUnit.MILLISECONDS);
     }
 
