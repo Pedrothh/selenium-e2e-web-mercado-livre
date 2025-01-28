@@ -42,7 +42,7 @@ Este projeto utiliza **Selenium**, **Java**, **JUnit**, **Allure Reports** e **J
 
    ```bash
    git clone <URL_DO_REPOSITORIO>
-   cd tf3-modulo-selenium
+   cd selenium-e2e-web-mercado-livre
    ```
 
 2. Instale as dependências:
